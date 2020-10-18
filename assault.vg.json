@@ -18,7 +18,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "gray",
-        "stroke": "black"
+        "stroke": "white"
       }
     },
     {
