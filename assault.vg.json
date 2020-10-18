@@ -1,23 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Assault Cases In San Francisco in 2016 (1 dot = 1 murder case)",
+  "title": "Assault Cases In San Francisco during 2016 (1 dot = 1 murder case)",
   "width": 1000,
   "height": 600,
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/us-states/CA-06-california-counties.json",
+        "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/sanfrancisco.topojson",
         "format": {
-          "type": "topojson",
+          "type": "topojson"
         }
       },
       "projection": {
-        "type": "equalEarth"
+        "type": "mercator"
       },
       "mark": {
         "type": "geoshape",
-        "fill": "white",
-        "stroke": "black"
+        "fill": "black",
+        "stroke": "white"
       }
     },
     {
@@ -25,7 +25,7 @@
         "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/Police_Department_Incidents_Assault.csv"
       },
       "projection": {
-        "type": "equalEarth"
+        "type": "mercator"
       },
       "mark": "circle",
       "encoding": {
@@ -37,7 +37,7 @@
           "field": "Y",
           "type": "quantitative"
         },
-        "size": {"value": 3},
+        "size": {"value": 5},
         "color": {"value": "red"}
       }
     }
