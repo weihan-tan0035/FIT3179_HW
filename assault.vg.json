@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Assault Cases In San Francisco during 2016 (1 dot = 1 murder case)",
+  "title": "Assault Cases In San Francisco during 2016 (1 dot = 1 assault case)",
   "width": 1000,
   "height": 600,
   "layer": [
