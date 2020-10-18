@@ -1,32 +1,27 @@
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
-  "height": 300,
-  "data": {
-    "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/ne_10m_admin_1_states_provinces.json",
-    "format": {
-      "type": "topojson",
-      "feature": "counties"
-    }
-  },
-  "transform": [{
-    "lookup": "Location",
-    "from": {
-      "data": {
-        "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/Police_Department_Incidents_-_Previous_Year__2016_.csv"
-      },
-      "key": "Location",
-      "fields": ["rate"]
-    }
-  }],
-  "projection": {
-    "type": "albersUsa"
-  },
-  "mark": "geoshape",
-  "encoding": {
-    "color": {
-      "field": "rate",
-      "type": "quantitative"
-    }
-  }
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  
+</head>
+<body>
+  
+<div id="dot_map"></div>
+
+<script type="text/javascript">
+
+  var spec2 = "assault.vg.json";
+  vegaEmbed('#dot_map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
