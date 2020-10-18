@@ -8,7 +8,8 @@
       "data": {
         "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/sanfrancisco.topojson",
         "format": {
-          "type": "topojson"
+          "type": "topojson",
+          "feature":"sanfrancisco"
         }
       },
       "projection": {
@@ -16,8 +17,8 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "black",
-        "stroke": "white"
+        "fill": "gray",
+        "stroke": "black"
       }
     },
     {
