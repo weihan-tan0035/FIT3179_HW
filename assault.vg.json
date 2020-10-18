@@ -39,7 +39,7 @@
           "type": "quantitative"
         },
         "size": {"value": 5},
-        "color": {"value": "red"}
+        "color": {"value": "blue"}
       }
     }
   ]
