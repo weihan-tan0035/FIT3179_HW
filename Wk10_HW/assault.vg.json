@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Assault Cases In San Francisco during 2016 (1 dot = 1 assault case)",
+  "width": 1000,
+  "height": 600,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/sanfrancisco.topojson",
+        "format": {
+          "type": "topojson",
+          "feature":"sanfrancisco"
+        }
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "gray",
+        "stroke": "white"
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/Police_Department_Incidents_Assault.csv"
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": "circle",
+      "encoding": {
+        "longitude": {
+          "field": "X",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Y",
+          "type": "quantitative"
+        },
+        "size": {"value": 5},
+        "color": {"value": "blue"}
+      }
+    }
+  ]
+}
