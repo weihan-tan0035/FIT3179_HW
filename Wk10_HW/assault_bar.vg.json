@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/weihan-tan0035/FIT3179_HW/main/Police_Department_Incidents_Assault.csv"
+  },
+  
+  "title": "Number of Assault cases based on District",
+  "width": 400,
+  "height": 400,
+  "selection":{
+    "district_highlight":{
+      "type":"multi",
+      "fields": ["PdDistrict"],
+      "bind":"legend"
+    }
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+        "aggregate": "count", "field": "PdDistrict",
+        "title": "crime count"
+      },
+    "y": {
+      "field": "PdDistrict",
+      "type": "nominal",
+      "title" : "District"
+    },
+    "color":{
+      "field":"PdDistrict",
+      "type":"nominal",
+      "title":"District"
+    },
+    "opacity":{
+      "condition":{
+        "selection":"district_highlight",
+        "value":1.0
+      },
+      "value":0.2
+    }
+  },
+  
+  "config": {}
+}
