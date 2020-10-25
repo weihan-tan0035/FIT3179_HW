@@ -18,7 +18,7 @@
   "encoding": {
     "x": {
         "aggregate": "count", "field": "PdDistrict",
-        "title": "crime count"
+        "title": "Number of Cases"
       },
     "y": {
       "field": "PdDistrict",
@@ -36,8 +36,10 @@
         "value":1.0
       },
       "value":0.2
-    }
+    },
+    "tooltip":[{"field":"PdDistrict","type":"nominal","title":"District"},{"aggregate":"count","field":"PdDistrict","format":",","title":"Number of Cases"}]
   },
+  
   
   "config": {}
 }
