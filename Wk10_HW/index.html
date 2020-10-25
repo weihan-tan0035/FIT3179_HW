@@ -15,11 +15,11 @@
 
 <h1>An Example of Multiple Visualisations</h1>
 
-<h2>Crime Distribution Across New York</h2>
+<h2>Assault Case Distribution Across San Francisco</h2>
 <div id="dot_map"></div>
 
-<h2>Female Vs Male</h2>
-<div id="population_pyramid"></div>
+<h2>Assault Case Statistics Across Districts in San Francisco</h2>
+<div id="bar_chart"></div>
 
 <script type="text/javascript">
   
@@ -31,7 +31,7 @@
   
   var vis2 = "assault_bar.vg.json";
   
-  vegaEmbed('#population_pyramid', vis2).then(function(result) {
+  vegaEmbed('#bar_chart', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
